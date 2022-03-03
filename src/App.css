@@ -1,0 +1,75 @@
+.App{
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 30, 65);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.main-section{
+  padding: 1em;
+  background-color:beige;
+  margin: auto;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 2px 10px black;
+}
+
+.main-section h1{
+  font-size: 3rem;
+}
+
+.main-section p{
+  letter-spacing: 1.1px;
+
+}
+.numbers{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  
+}
+
+.card{
+  margin: 0 auto;
+  font-size: 2em;
+  width: 60px;
+  height: 60px;
+  background-color: blanchedalmond;
+  border: 2px soild black;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section button{
+  padding: .5em 1.3em;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: background-color 200ms linear;
+  cursor: pointer;
+}
+.main-section button:hover{
+  background-color: rgb(93, 28, 153);
+}
+.green{
+  background-color: rgb(29, 150, 109);
+}
+
+.red{
+  background-color: rgb(255, 51, 0);
+}
