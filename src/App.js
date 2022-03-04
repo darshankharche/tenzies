@@ -2,6 +2,7 @@
 import './App.css';
 import React from 'react';
 import Card from './components/Card';
+import Confetti from 'react-confetti';
 function App() {
   const [state,setState] = React.useState([
     {
@@ -132,6 +133,7 @@ function App() {
          {showNumbers}
         </div>
         <button onClick={changeNumbers}>{status === "InProgress" ? "Roll" : "Restart"}</button>  
+        {status === "Success" && <Confetti />}
       </div>
     </div>
   );
