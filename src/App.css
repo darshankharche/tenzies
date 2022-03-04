@@ -50,7 +50,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
+
 
 .main-section button{
   padding: .5em 1.3em;
