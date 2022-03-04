@@ -56,6 +56,16 @@ function App() {
   ])
   const [selectedNumber,setSelectedNumber] = React.useState()
   const [status,setStatus] = React.useState("InProgress")
+  const [width, setWidth]   = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateDimensions = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+  }
+  React.useEffect(() => {
+      window.addEventListener("resize", updateDimensions);
+      return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   const showNumbers = state.map(per=> <Card key={per.id} id={per.id} number={per.value} handleClick={handleClick} />)
 
   //console.log(selectedNumber)
@@ -133,7 +143,7 @@ function App() {
          {showNumbers}
         </div>
         <button onClick={changeNumbers}>{status === "InProgress" ? "Roll" : "Restart"}</button>  
-        {status === "Success" && <Confetti />}
+        {status === "Success" && <Confetti width={width} height={height}/>}
       </div>
     </div>
   );
