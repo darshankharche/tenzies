@@ -88,15 +88,15 @@ function App() {
     
   }
 
-  function handleClick(id,number){
-    const checkIfCorrect = selectedNumber ? selectedNumber: number
-    (!selectedNumber && setSelectedNumber(number))
+  function handleClick(id,value){
+    const checkIfCorrect = selectedNumber ? selectedNumber : value
+    !selectedNumber && setSelectedNumber(value)
     
 
     const cardElement = document.getElementById(`card${id}`)
     ///console.log(cardElement)
-    number === checkIfCorrect ? cardElement.classList.add("green") : cardElement.classList.add("red")
-    number !== checkIfCorrect && setStatus("Failed")
+    value === checkIfCorrect ? cardElement.classList.add("green") : cardElement.classList.add("red")
+    value !== checkIfCorrect && setStatus("Failed")
 
     setState(prevState=>{
       const newState = []
