@@ -90,7 +90,8 @@ function App() {
 
   function handleClick(id,number){
     const checkIfCorrect = selectedNumber ? selectedNumber: number
-    {!selectedNumber && setSelectedNumber(number)}
+    (!selectedNumber && setSelectedNumber(number))
+    
 
     const cardElement = document.getElementById(`card${id}`)
     ///console.log(cardElement)
